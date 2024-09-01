@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: lightblue;
+      position: relative;
+    }
+
+    .box::after {
+      content: 'before';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: lightcoral;
+      left: 0;
+      top: 0;
+      opacity: 0.5;
+      /* transform: scaleX(2) scaleY(2); */
+      /* transform: translateY(100px) scale(1, -1); */
+      /* transform: translateY(100px) rotate(30deg); */
+      /* transform: rotate(45deg); */
+      /* transform: scale(0.5); */
+      /* transform-origin: left top; */
+      transform: skew(-45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">before</div>
+</body>
+
+</html>

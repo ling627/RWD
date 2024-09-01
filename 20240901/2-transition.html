@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+    */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background: lightblue;
+      /* transition: border-radius 2s ease 0s; */
+      /* transition-duration: 5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      transition-property: all; */
+      /* 分開指定轉場 => 對三個對象 */
+      /* transition-property: background-color, transform, width;
+      transition-duration: 5s, 1.5s, 500ms;
+      transition-timing-function: ease, ease-in, linear;
+      transition-delay: 0s, 5s, 0s; */
+      /* 簡寫指定轉場 => 對三個對象 */
+      transition:
+        width 500ms linear 0s,
+        background-color 5s,
+        transform 1.5s ease-in 3s;
+    }
+    
+    div:hover {
+      background-color: lightcoral;
+      transform: rotate(90deg);
+      width: 500px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
